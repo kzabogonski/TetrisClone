@@ -1,6 +1,13 @@
+import static constants.Constants.*;
+
 public class Main {
 
-    public static final int FPS = 30;
+    private static boolean isBoostRequested;
+    /** Номер игровой итерации по модулю FRAMES_PER_MOVE.
+     * Падение фигуры вних происходит если loopNumber % FRAMES_PER_MOVE == 0
+     * Т.е. 1 раз ха FRAMES_PER_MOVE итераций.
+    */
+    private static int loopNumber;
 
     public static void main(String[] args) {
         initFields();
@@ -49,11 +56,11 @@ public class Main {
             isRotateRequested = false;
         }
 
-        /**
+        /*
          * Падение фигуры вних происходит если loopNumber % FRAMES_PER_MOVE == 0
          * Т.е. 1 рах ха FRAMES_PER_MOVE итераций
          * */
-        if (loopNumber % (FRAMES_PER_MOVE / (usBoostRequested ? BOOST_MULTIPIER : 1))) == 0) gameField.letFallDown();
+        if (loopNumber % (FRAMES_PER_MOVE / (isBoostRequested ? BOOST_MULTIPLIER : 1))) == 0) gameField.letFallDown();
 
         //Увеличение номера итерации (по модулю FPM)
         loopNumber = (loopNumber+1) % (FRAMES_PER_MOVE);
