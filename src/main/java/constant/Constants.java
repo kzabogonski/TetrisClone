@@ -1,4 +1,6 @@
-package constants;
+package constant;
+
+import enums.ReadableColor;
 
 public class Constants {
 

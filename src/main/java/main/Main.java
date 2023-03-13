@@ -1,4 +1,6 @@
-import static constants.Constants.*;
+package main;
+
+import static constant.Constants.*;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package constants;
+package enums;
 
 import java.util.Random;
 

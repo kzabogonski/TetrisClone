@@ -6,9 +6,11 @@ import grapics.GraphicsModule;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
+import org.lwjgl.util.Color;
 
 import static org.lwjgl.opengl.GL11.*;
-import constants.Constants;
+import constant.Constants;
+
 
 
 /**
@@ -49,7 +51,25 @@ public class LwjglGraphicsModule implements GraphicsModule {
         glClearColor(1, 1, 1, 1);
     }
 
-    private void drawCell(int x, int y, Color)1`222`        wwwww
+    /**
+     * Отрисовывает отдельную ячейку
+      * @param x Координаты отрисовки x
+     * @param y Координаты отрисовки y
+     * @param color Цвет ячейки
+     */
+    private void drawCell(int x, int y, Color color){
+        glColor3b(color.getRedByte(), color.getGreenByte(), color.getBlueByte());
+        glBegin(GL_QUADS);
+        glTexCoord2f(0, 0);
+        glVertex2f(x, y + Constants.CELL_SIZE);
+        glTexCoord2f(1, 0);
+        glVertex2f(x + Constants.CELL_SIZE, y + Constants.CELL_SIZE);
+        glTexCoord2f(1, 1);
+        glVertex2f(x + Constants.CELL_SIZE, y);
+        glTexCoord2f(0, 1);
+        glVertex2f(x, y);
+        glEnd();
+    }
 
     @Override
     public void draw(GameField field) {
