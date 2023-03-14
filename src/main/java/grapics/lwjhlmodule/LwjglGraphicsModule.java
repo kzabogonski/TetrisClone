@@ -63,7 +63,7 @@ public class LwjglGraphicsModule implements GraphicsModule {
      * @param color Цвет ячейки
      */
     private void drawCell(int x, int y, Color color){
-        glColor3b(color.getRedByte(), color.getGreenByte(), color.getBlueByte());
+        glColor3ub(color.getRedByte(), color.getGreenByte(), color.getBlueByte());
         glBegin(GL_QUADS);
         glTexCoord2f(0, 0);
         glVertex2f(x, y + Constants.CELL_SIZE);

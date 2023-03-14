@@ -180,14 +180,14 @@ public class GameField {
         if (canFall) {
             figure.fall();
         } else {
-            Coord[] figureCoord = figure.getCoords();
+            Coord[] figureCoords = figure.getCoords();
 
             /* Флаг, говорящий о том, что после бужет необходимо сместить линии вниз
              * (т.е. какая-то линия была уничтожена)
              */
             boolean haveToShiftLinesDown = false;
 
-            for (Coord coord : figureCoord) {
+            for (Coord coord : figureCoords) {
                 theField[coord.x][coord.y] = figure.getColor();
 
                 //Увеличиваем информаию о количестве статичных блоков в линии

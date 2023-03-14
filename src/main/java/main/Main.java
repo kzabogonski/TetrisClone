@@ -92,5 +92,6 @@ public class Main {
 
         //Увеличение номера итерации (по модулю FPM)
         loopNumber = (loopNumber+1) % (FRAMES_PER_MOVE);
+        endOfGame = endOfGame || gameField.isOverfilled();
     }
 }
