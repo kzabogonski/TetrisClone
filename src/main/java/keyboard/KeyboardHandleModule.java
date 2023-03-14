@@ -1,5 +1,7 @@
 package keyboard;
 
+import enums.ShiftDirection;
+
 public interface KeyboardHandleModule {
 
     /**

@@ -2,7 +2,7 @@ package enums;
 
 import java.util.Random;
 
-public enum ReadableColor {
+public enum KzReadableColor {
     BLACK,
     RED,
     GREEN,
@@ -12,9 +12,9 @@ public enum ReadableColor {
     ORANGE,
     PURPLE;
 
-    private static final ReadableColor[] colorByNumber = {BLACK, RED, GREEN, BLUE, AQUA, YELLOW, ORANGE, PURPLE,};
+    private static final KzReadableColor[] colorByNumber = {BLACK, RED, GREEN, BLUE, AQUA, YELLOW, ORANGE, PURPLE,};
 
-    public static ReadableColor getRandomColor() {
+    public static KzReadableColor getRandomColor() {
         int colorNumber = new Random().nextInt(colorByNumber.length);
         return colorByNumber[colorNumber];
     }

@@ -1,6 +1,6 @@
 package constant;
 
-import enums.ReadableColor;
+import enums.KzReadableColor;
 
 public class Constants {
 
@@ -8,7 +8,7 @@ public class Constants {
     public static final int CELL_SIZE = 24;
 
     // Количество ячеек по горизонтали и вертикали
-    public static final int COUNT_CELLS_X = 30;
+    public static final int COUNT_CELLS_X = 15;
     public static final int COUNT_CELLS_Y = 2 * COUNT_CELLS_X;
 
     //Невидимое пространство с верху,  в котором создаются фигуры
@@ -32,7 +32,7 @@ public class Constants {
     public static final int FRAMES_PER_MOVE = FPS / MOVE_DOWNS_PER_SECONDS;
 
     //Цвет, в котором поле обозначается пустота
-    public static final ReadableColor EMPTINESS_COLOR = ReadableColor.BLACK;
+    public static final KzReadableColor EMPTINESS_COLOR = KzReadableColor.BLACK;
 
     //Колличество линий, заполненых блоками в начале
     public static final int BLOCKS_INITIAL_LEVEL = COUNT_CELLS_Y / 3;

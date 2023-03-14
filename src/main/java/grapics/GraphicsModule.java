@@ -1,5 +1,7 @@
 package grapics;
 
+import main.GameField;
+
 public interface GraphicsModule {
     /**
      * Отрисовывает переданное игровое поле

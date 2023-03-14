@@ -8,19 +8,19 @@ import java.util.Random;
  */
 public enum FigureForm {
 
-    I_FORM (CoordMask.I_FORM, ReadableColor.BLUE),
-    J_FORM (CoordMask.J_FORM, ReadableColor.ORANGE),
-    L_FORM (CoordMask.L_FORM, ReadableColor.YELLOW),
-    O_FORM (CoordMask.O_FORM, ReadableColor.RED),
-    S_FORM (CoordMask.S_FORM, ReadableColor.AQUA),
-    Z_FORM (CoordMask.Z_FORM, ReadableColor.PURPLE),
-    T_FORM (CoordMask.T_FORM, ReadableColor.GREEN);
+    I_FORM (CoordMask.I_FORM, KzReadableColor.BLUE),
+    J_FORM (CoordMask.J_FORM, KzReadableColor.ORANGE),
+    L_FORM (CoordMask.L_FORM, KzReadableColor.YELLOW),
+    O_FORM (CoordMask.O_FORM, KzReadableColor.RED),
+    S_FORM (CoordMask.S_FORM, KzReadableColor.AQUA),
+    Z_FORM (CoordMask.Z_FORM, KzReadableColor.PURPLE),
+    T_FORM (CoordMask.T_FORM, KzReadableColor.GREEN);
 
     //Маска координат (задает геометрическую форму)
     private CoordMask mask;
 
     //Цвет, характерный для этой формы
-    private ReadableColor color;
+    private KzReadableColor color;
 
 
     /**
@@ -28,7 +28,7 @@ public enum FigureForm {
      * @param mask маска координат (задает геометрическую форму)
      * @param color цвет, характерный для этой формы
      */
-    FigureForm(CoordMask mask, ReadableColor color){
+    FigureForm(CoordMask mask, KzReadableColor color){
         this.mask = mask;
         this.color = color;
     }
@@ -46,7 +46,7 @@ public enum FigureForm {
     /**
      * @return цвет для данной формы
      */
-    public ReadableColor getColor(){
+    public KzReadableColor getColor(){
         return this.color;
     }
 
