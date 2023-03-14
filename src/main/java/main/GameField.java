@@ -3,6 +3,7 @@ package main;
 
 import enums.KzReadableColor;
 import enums.ShiftDirection;
+import grapics.Text;
 
 import java.util.Random;
 
@@ -20,6 +21,8 @@ public class GameField {
     //Цвет ячеек поляю Для пустых ячеек используется константа EMPTINESS_COLOR
     private KzReadableColor[][] theField;
 
+    private Text text = new Text();
+    private int count = 0;
     // Колличество непустых ячеек строки
     private int[] countFilledCellsInLine;
 
@@ -196,6 +199,7 @@ public class GameField {
                  * Если заполнена полностю, устанавливаем haveToShiftLinesDown в true
                  */
                 haveToShiftLinesDown = tryDestroyLine(coord.y) || haveToShiftLinesDown;
+
             }
 
             // Если это необходимо, смещаем линии на образовашееся пустое место
@@ -257,7 +261,7 @@ public class GameField {
         }
 
         countFilledCellsInLine[y] = 0;
-
+        getCount();
         return true;
     }
 
@@ -271,5 +275,9 @@ public class GameField {
             if(countFilledCellsInLine[COUNT_CELLS_Y+i] != 0) ret = true;
         }
         return ret;
+    }
+
+    public void getCount(){
+        System.out.println("Score:"+count);
     }
 }
