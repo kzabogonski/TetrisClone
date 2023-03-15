@@ -1,8 +1,8 @@
 package main;
 
 import enums.ShiftDirection;
-import grapics.GraphicsModule;
-import grapics.lwjhlmodule.LwjglGraphicsModule;
+import graphics.GraphicsModule;
+import graphics.lwjhlmodule.LwjglGraphicsModule;
 import keyboard.KeyboardHandleModule;
 import keyboard.lwjglmodule.LwjglKeyboardHandleModule;
 

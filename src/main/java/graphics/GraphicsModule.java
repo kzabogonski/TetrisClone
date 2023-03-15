@@ -1,4 +1,4 @@
-package grapics;
+package graphics;
 
 import main.GameField;
 

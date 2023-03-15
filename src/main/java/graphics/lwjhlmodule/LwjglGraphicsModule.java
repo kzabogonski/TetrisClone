@@ -1,9 +1,9 @@
-package grapics.lwjhlmodule;
+package graphics.lwjhlmodule;
 
 
 import enums.KzReadableColor;
 import exception.ErrorCatcher;
-import grapics.GraphicsModule;
+import graphics.GraphicsModule;
 import main.Coord;
 import main.Figure;
 import main.GameField;

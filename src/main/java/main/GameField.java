@@ -3,7 +3,7 @@ package main;
 
 import enums.KzReadableColor;
 import enums.ShiftDirection;
-import grapics.Text;
+import graphics.Text;
 
 import java.util.Random;
 

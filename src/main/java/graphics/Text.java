@@ -1,4 +1,4 @@
-package grapics;
+package graphics;
 
 import org.lwjgl.opengl.GL11;
 
